@@ -154,6 +154,7 @@ namespace NeedlemanWunschAlgorithm
                 List<string> indexesOfMatchPath = new List<string>();
                 string pathIndex = columnIndex + rowIndex.ToString();
                 indexesOfMatchPath.Add(pathIndex);
+                dataGridView1.Rows[rowIndex].Cells[columnIndex].Style.BackColor = Color.SkyBlue;
                 while (true)
                 {
                     // eslesiyorsa capraza git eslesmiyorsa maximumu bul
@@ -163,6 +164,7 @@ namespace NeedlemanWunschAlgorithm
                         rowIndex = rowIndex - 1;
                         pathIndex = columnIndex + rowIndex.ToString();
                         indexesOfMatchPath.Add(pathIndex);
+                        dataGridView1.Rows[rowIndex].Cells[columnIndex].Style.BackColor = Color.SkyBlue;
                     }
                     else
                     {
@@ -190,6 +192,7 @@ namespace NeedlemanWunschAlgorithm
                             rowIndex = rowIndex - 1;
                             pathIndex = columnIndex + rowIndex.ToString();
                             indexesOfMatchPath.Add(pathIndex);
+                            dataGridView1.Rows[rowIndex].Cells[columnIndex].Style.BackColor = Color.SkyBlue;
                         }
                         else if (cellLeftValue >= cellCrossValue && cellLeftValue >= cellTopValue) // maximum solda
                         {
@@ -197,6 +200,7 @@ namespace NeedlemanWunschAlgorithm
                             rowIndex = rowIndex;
                             pathIndex = columnIndex + rowIndex.ToString();
                             indexesOfMatchPath.Add(pathIndex);
+                            dataGridView1.Rows[rowIndex].Cells[columnIndex].Style.BackColor = Color.SkyBlue;
                         }
                         else  // maximum yukarda
                         {
@@ -204,6 +208,7 @@ namespace NeedlemanWunschAlgorithm
                             rowIndex = rowIndex - 1;
                             pathIndex = columnIndex + rowIndex.ToString();
                             indexesOfMatchPath.Add(pathIndex);
+                            dataGridView1.Rows[rowIndex].Cells[columnIndex].Style.BackColor = Color.SkyBlue;
                         }
                     }
                     if (columnIndex == 1 && rowIndex == 1)
